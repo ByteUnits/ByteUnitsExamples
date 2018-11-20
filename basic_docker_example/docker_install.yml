@@ -1,0 +1,173 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: /usr/local/bin/fish
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/tylermoon/Code/SocialTeaDemos/basic_docker
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 149
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 32
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 888
+    content: "\e]0;fish  /Users/tylermoon/Code/SocialTeaDemos/basic_docker\a\e[30m\e(B\e[mWelcome to fish, the friendly interactive shell\r\n"
+  - delay: 5
+    content: "\e[?2004h"
+  - delay: 19
+    content: "\e]0;fish  /Users/tylermoon/Code/SocialTeaDemos/basic_docker\a\e[30m\e(B\e[m\e[38;5;237m⏎\e(B\e[m                                                                                                                                                    \r⏎ \r\e[2K\e[1m\e[32m➜  \e[1m\e[36mbasic_docker\e[30m\e(B\e[m \e[K"
+  - delay: 2061
+    content: "b\b\e[38;2;220;50;47mb\e[30m\e(B\e[m\e[38;2;88;110;117mrew uninstall docker\e[20D\e[30m\e(B\e[m"
+  - delay: 238
+    content: "\e[38;2;220;50;47mr\e[38;2;88;110;117mew uninstall docker\e[19D\e[30m\e(B\e[m"
+  - delay: 50
+    content: "\e[38;2;220;50;47me\e[38;2;88;110;117mw uninstall docker\e[18D\e[30m\e(B\e[m"
+  - delay: 87
+    content: "\e[38;2;220;50;47mw\e[38;2;88;110;117m uninstall docker\e[17D\e[30m\e(B\e[m\b\b\b\b\e[38;2;147;161;161mbrew\e[38;2;88;110;117m uninstall docker\e[17D\e[30m\e(B\e[m"
+  - delay: 139
+    content: "\e[38;2;147;161;161m \e[38;2;88;110;117muninstall docker\e[16D\e[30m\e(B\e[m\b \e[38;2;88;110;117muninstall docker\e[16D\e[30m\e(B\e[m"
+  - delay: 205
+    content: "i\e[K\e[38;2;88;110;117mnstall docker\e[13D\e[30m\e(B\e[m\b\e[38;2;131;148;150mi\e[38;2;88;110;117mnstall docker\e[13D\e[30m\e(B\e[m"
+  - delay: 260
+    content: "\e[38;2;131;148;150mn\e[38;2;88;110;117mstall docker\e[12D\e[30m\e(B\e[m"
+  - delay: 103
+    content: "\e[38;2;131;148;150ms\e[38;2;88;110;117mtall docker\e[11D\e[30m\e(B\e[m"
+  - delay: 98
+    content: "\e[38;2;131;148;150mt\e[38;2;88;110;117mall docker\e[10D\e[30m\e(B\e[m"
+  - delay: 82
+    content: "\e[38;2;131;148;150ma\e[38;2;88;110;117mll docker\e[9D\e[30m\e(B\e[m"
+  - delay: 108
+    content: "\e[38;2;131;148;150ml\e[38;2;88;110;117ml docker\b\b\b\b\b\b\b\b\e[30m\e(B\e[m"
+  - delay: 169
+    content: "\e[38;2;131;148;150ml\e[38;2;88;110;117m docker\b\b\b\b\b\b\b\e[30m\e(B\e[m"
+  - delay: 105
+    content: "\e[38;2;131;148;150m \e[38;2;88;110;117mdocker\b\b\b\b\b\b\e[30m\e(B\e[m\b \e[38;2;88;110;117mdocker\b\b\b\b\b\b\e[30m\e(B\e[m"
+  - delay: 79
+    content: "d\e[38;2;88;110;117mocker\b\b\b\b\b\e[30m\e(B\e[m\b\e[38;2;131;148;150md\e[38;2;88;110;117mocker\b\b\b\b\b\e[30m\e(B\e[m"
+  - delay: 94
+    content: "\e[38;2;131;148;150mo\e[38;2;88;110;117mcker\b\b\b\b\e[30m\e(B\e[m"
+  - delay: 70
+    content: "\e[38;2;131;148;150mc\e[38;2;88;110;117mker\b\b\b\e[30m\e(B\e[m"
+  - delay: 110
+    content: "\e[38;2;131;148;150mk\e[38;2;88;110;117mer\b\b\e[30m\e(B\e[m"
+  - delay: 85
+    content: "\e[38;2;131;148;150me\e[38;2;88;110;117mr\b\e[30m\e(B\e[m"
+  - delay: 75
+    content: "\e[38;2;131;148;150mr\e[30m\e(B\e[m"
+  - delay: 157
+    content: "\r\n\e[30m\e(B\e[m\e[?2004l\e]0;brew  /Users/tylermoon/Code/SocialTeaDemos/basic_docker\a\e[30m\e(B\e[m\r"
+  - delay: 1980
+    content: "\e[34m==>\e[0m \e[1mDownloading https://homebrew.bintray.com/bottles/docker-18.09.0.mojave.bottle.tar.gz\e[0m\r\n"
+  - delay: 716
+    content: "Already downloaded: /Users/tylermoon/Library/Caches/Homebrew/downloads/e6955256259dc397b37eaf37bc5145e963ab800c83d1b7e3317e4bb220e2e440--docker-18.09.0.mojave.bottle.tar.gz\r\n"
+  - delay: 49
+    content: "\e[34m==>\e[0m \e[1mPouring docker-18.09.0.mojave.bottle.tar.gz\e[0m\r\n"
+  - delay: 1167
+    content: "\e[34m==>\e[0m \e[1mCaveats\e[0m\r\nBash completion has been installed to:\r\n  /usr/local/etc/bash_completion.d\r\n\r\nzsh completions have been installed to:\r\n  /usr/local/share/zsh/site-functions\r\n\r\nfish completions have been installed to:\r\n  /usr/local/share/fish/vendor_completions.d\r\n\e[34m==>\e[0m \e[1mSummary\e[0m\r\n\U0001F37A  /usr/local/Cellar/docker/18.09.0: 8 files, 48.9MB\r\n"
+  - delay: 23
+    content: "\e[?2004h"
+  - delay: 14
+    content: "\e]0;fish  /Users/tylermoon/Code/SocialTeaDemos/basic_docker\a\e[30m\e(B\e[m\e[38;5;237m⏎\e(B\e[m                                                                                                                                                    \r⏎ \r\e[2K\e[1m\e[32m➜  \e[1m\e[36mbasic_docker\e[30m\e(B\e[m \e[K"
+  - delay: 3558
+    content: "\r\n\e[30m\e(B\e[m\e[30m\e(B\e[m\e[?2004l"
