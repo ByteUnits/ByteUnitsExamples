@@ -1,1 +1,3 @@
 *.gif
+node_modules
+.git
