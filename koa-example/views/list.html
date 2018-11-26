@@ -1,0 +1,25 @@
+<!-- layout.html -->
+{% extends 'layout.html' %}
+
+{% block title %}Todo Items{% endblock %}
+
+{% block content %}
+<h1>Items</h1>
+<p>You have <strong>{{ todoList.length }}</strong> items!</p>
+<ul id="items" class="list-group">
+  <!-- repeat list items for each todo item -->
+  {% for item in todoList %}
+    <li class="list-group-item">
+      <h4 class="list-group-item-heading">{{ item.title }}</h4>
+      <p class="list-group-item-text">
+        <a href="/todo/{{ item.id }}">Item Details</a>
+      </p>
+    </li>
+  {% endfor %}
+</ul>
+<hr/>
+<!-- button to create a new item -->
+<a href="/todo/new" class="btn btn-info btn-lg">
+  <span class="glyphicon glyphicon-pencil"></span> Create an Item
+</a>
+{% endblock %}

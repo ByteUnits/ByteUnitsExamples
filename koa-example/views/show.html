@@ -1,0 +1,10 @@
+<!-- show.html -->
+{% extends 'layout.html' %}
+
+{% block title %}{{ todo.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ todo.title }}</h1>
+  <p>{{ todo.body }}</p>
+  <a href="/" class="btn btn-success">Back</a>
+{% endblock %}

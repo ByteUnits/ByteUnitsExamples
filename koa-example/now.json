@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@now/node" },
+    { "src": "views/*.html", "use": "@now/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/server.js" }
+  ],
+  "regions": ["iad1"]
+}

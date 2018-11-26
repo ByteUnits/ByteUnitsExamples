@@ -1,0 +1,25 @@
+<!-- layout.html -->
+<html>
+<head>
+  <title>{% block title %}Blog{% endblock %}</title>
+  <!-- Add a bootstrap style cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+<body>
+  <!-- main project div -->
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Todo List</h1>
+    </div>
+    <!-- through swig templating the content section
+     will be switched depending on which page is to be rendered -->
+    <section id="content">
+      {% block content %}
+        <p>Missing content!</p>
+      {% endblock %}
+    </section>
+  </div>
+</body>
+</html>
