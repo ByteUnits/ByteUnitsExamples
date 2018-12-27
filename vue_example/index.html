@@ -1,0 +1,50 @@
+<!-- index.html -->
+<html>
+  <head>
+    <!-- Load Vue.js core library from the CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Load the bootstrap styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Source the components Vue file -->
+    <script src="components.js"></script>
+    <div style="height:100px;"></div>
+    <!-- App component for loading Vue template into -->
+    <div id="app" class="container">
+      <!-- Example of a message being displayed -->
+      <h1>{{ message }}</h1>
+
+      <br/><br/>
+      <hr>
+      <h2>Loops</h2>
+      <ol>
+        <!-- Example of a Vue foreach loop -->
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+
+      <br/><br/>
+      <hr>
+      <h2>User Interaction</h2>
+      <p>{{ revMessage }}</p>
+      <!-- Example of handling user input -->
+      <button v-on:click="reverseMessage" class="btn btn-success">Reverse Message</button>
+
+      <br/><br/>
+      <hr>
+      <h2>Two Way Binding</h2>
+      <!-- Example of two way data binding -->
+      <p>{{ twoWayBindingMessage }}</p>
+      <input v-model="twoWayBindingMessage">
+
+      <br/><br/>
+      <hr>
+      <h2>Components</h2>
+      <!-- Example of loading a custom component -->
+      <todo-item></todo-item>
+    </div>
+  </body>
+<script src="vue.js"></script>
+</html>
