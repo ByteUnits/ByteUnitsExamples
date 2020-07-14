@@ -1,3 +1,5 @@
+// tssh.go
+
 package main
 
 import (
@@ -9,26 +11,30 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/urfave/cli"
+	"github.com/urfave/cli" // Library that adds useful utilities for handling command line arguments
 )
 
+// Struct for managing data
 type sshTemplate struct {
 	Name    string
 	Command string
 }
 
+// Utility for handling errors
 func check(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
+// Save a new template to a json file
 func writeToFile(data map[string]sshTemplate, filePath string) {
 	file, _ := json.MarshalIndent(data, "", " ")
 	err := ioutil.WriteFile(filePath, file, 0644)
 	check(err)
 }
 
+// Read from the json and parse a map of sshTemplate structs
 func readFromFile(filePath string) map[string]sshTemplate {
 	dat, err := ioutil.ReadFile(filePath)
 	check(err)
@@ -39,6 +45,7 @@ func readFromFile(filePath string) map[string]sshTemplate {
 	return res
 }
 
+// Add a new sshTemplate struct and save it to the file
 func addTemplate(name string, command string, filePath string) *sshTemplate {
 	templateArray := readFromFile(filePath)
 
@@ -55,6 +62,7 @@ func addTemplate(name string, command string, filePath string) *sshTemplate {
 	return &newTemplate
 }
 
+// Remove a template from the json file
 func removeTemplate(name string, filePath string) *sshTemplate {
 	templateArray := readFromFile(filePath)
 
@@ -68,6 +76,7 @@ func removeTemplate(name string, filePath string) *sshTemplate {
 	return &template
 }
 
+// Execute an ssh command based on saved data
 func executeCommand(template sshTemplate) {
 	fmt.Println("Executing SSH command for", template.Command)
 
@@ -83,6 +92,8 @@ func executeCommand(template sshTemplate) {
 
 func main() {
 	app := &cli.App{
+		// With no other arguments assume that the input is a Name of a saved template
+		// so load it from the file and execute the ssh command
 		Action: func(c *cli.Context) error {
 			argName := c.Args().First()
 
@@ -98,7 +109,7 @@ func main() {
 				Aliases: []string{"t"},
 				Usage:   "options for task templates",
 				Subcommands: []*cli.Command{
-
+					// tssh template add <name> <command>
 					{
 						Name:  "add",
 						Usage: "add a new template",
@@ -111,6 +122,7 @@ func main() {
 							return nil
 						},
 					},
+					// tssh template remove <name> <command>
 					{
 						Name:  "remove",
 						Usage: "remove an existing template",
@@ -126,6 +138,7 @@ func main() {
 		},
 	}
 
+	// Run the application
 	err := app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
