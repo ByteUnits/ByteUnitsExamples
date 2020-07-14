@@ -1,0 +1,14 @@
+{
+ "byteunits": {
+  "Name": "byteunits",
+  "Command": "-i ~/Code/ByteUnits/solidkey.cer ubuntu@54.208.89.163"
+ },
+ "fs": {
+  "Name": "fs",
+  "Command": "u48652948@home239040767.1and1-data.host"
+ },
+ "pihole": {
+  "Name": "pihole",
+  "Command": "pi@192.168.0.8"
+ }
+}
