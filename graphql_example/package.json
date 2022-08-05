@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "graphql": "^14.0.2",
-    "mongoose": "^5.3.13",
+    "mongoose": "^5.7.5",
     "superagent": "^4.0.0"
   },
   "devDependencies": {},
